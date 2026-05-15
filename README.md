@@ -1,5 +1,5 @@
 # 📰 NLP Text Classification for Topic Modeling
-### Course Project — DLBAIPNLP01
+### Course Project - DLBAIPNLP01
 
 A complete text classification pipeline that assigns newsgroup documents to topics using the **20 Newsgroups** dataset. Three classical ML models are trained, tuned, and evaluated on both a small (4-category) and full (20-category) setup.
 
@@ -31,7 +31,7 @@ This project implements a **supervised text classification** system for topic mo
 
 ## Dataset
 
-**20 Newsgroups** — a standard NLP benchmark dataset from `sklearn.datasets`.
+**20 Newsgroups** - a standard NLP benchmark dataset from `sklearn.datasets`.
 
 | Split | Documents |
 |-------|-----------|
@@ -141,7 +141,6 @@ All charts are saved as `.png` files in the repository root.
 └── README.md
 ```
 
----
 
 ## Setup & Usage
 
@@ -181,10 +180,10 @@ print(pred)  # e.g. [14]  →  sci.space
 
 ## Key Findings
 
-- **Accuracy drops sharply** (~22 pp) moving from 4 to 20 categories — expected as topics become more semantically overlapping.
+- **Accuracy drops sharply** (~22 pp) moving from 4 to 20 categories - expected as topics become more semantically overlapping.
 - **Most confused pairs** share vocabulary naturally: `talk.politics.misc` ↔ `talk.politics.guns` (88 errors), `talk.religion.misc` ↔ `soc.religion.christian` (63 errors), and `alt.atheism` ↔ `soc.religion.christian` (54 errors).
 - **Best-separated topics** are domain-specific with unique vocabulary: `rec.sport.hockey` (F1 = 0.88), `misc.forsale` (F1 = 0.77), `rec.sport.baseball` (F1 = 0.79).
-- **TF-IDF > CountVectorizer** by 1.73% on Naive Bayes — downweighting common cross-category words meaningfully helps.
+- **TF-IDF > CountVectorizer** by 1.73% on Naive Bayes - downweighting common cross-category words meaningfully helps.
 - All three models perform within ~2% of each other on the full dataset, suggesting the ceiling is largely a feature/data constraint rather than a model choice issue.
 
 
